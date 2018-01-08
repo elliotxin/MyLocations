@@ -110,24 +110,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-TG-1Q8">
-                                            <rect key="frame" x="10" y="0.0" width="301" height="21"/>
+                                            <rect key="frame" x="76" y="0.0" width="230" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huz-HS-GJP">
-                                            <rect key="frame" x="10" y="25" width="301" height="21"/>
+                                            <rect key="frame" x="76" y="25" width="230" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6N-Ie-UOA">
+                                            <rect key="frame" x="16" y="2" width="52" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="huz-HS-GJP" id="lVh-gg-JBj"/>
                                     <outlet property="descriptionLabel" destination="Kkz-TG-1Q8" id="RBW-uk-Yl5"/>
+                                    <outlet property="photoImageView" destination="g6N-Ie-UOA" id="DAY-DO-HlM"/>
                                     <segue destination="f49-cg-VrP" kind="show" identifier="EditLocation" id="FZj-tR-QpF"/>
                                 </connections>
                             </tableViewCell>
@@ -233,6 +238,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-hD-9tQ">
+                                                    <rect key="frame" x="105" y="12" width="155" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -357,17 +366,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="NbQ-ro-CSf" id="TKT-yd-C2m"/>
                         <outlet property="addressLabel" destination="Ql5-w0-W9C" id="JFG-dG-xbx"/>
                         <outlet property="categoryLabel" destination="J1p-Um-0wR" id="IoA-v1-BUc"/>
                         <outlet property="dateLabel" destination="Uey-gk-TLC" id="xfa-ho-DVB"/>
                         <outlet property="descriptionTextView" destination="Wml-Ix-kZi" id="qH8-X9-bWA"/>
+                        <outlet property="imageView" destination="NY4-hD-9tQ" id="nca-z5-WT3"/>
                         <outlet property="latitudeLabel" destination="Hy7-7y-k56" id="6Mu-7A-J5B"/>
                         <outlet property="longitudeLabel" destination="tG6-WZ-mIV" id="QTd-9k-3wf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgC-XW-W9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2557.5999999999999" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="2557.5" y="-322.18309859154931"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="qxx-sb-RJH">
@@ -512,6 +523,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="73B-6g-Uas"/>
+        <segue reference="FZj-tR-QpF"/>
     </inferredMetricsTieBreakers>
 </document>
